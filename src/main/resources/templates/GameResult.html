@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+    <title>Pick A Box - Result</title>
+</head>
+<body>
+<div class="splash-screen">
+    <center>
+        <div id="mainHead">Are you ready?</div>
+        <div id="subHead">We are opening your box!</div>
+        <br>
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </center>
+</div>
+<div class="main-gift">
+    <span>Your Box has</span>
+    <div class="box-content">IPhone</div>
+</div>
+<div class="other-gifts">
+    <span>Other Boxes Had</span>
+    <div class="box-sub-content">Better Luck Next Time!</div>
+    <div class="box-sub-content">Better Luck Next Time!</div>
+</div>
+
+<center><a href="/"><button  class="button-continue">⟳ Play Again</button></a></center>
+
+<script>
+    $().ready(function() {
+     $(".lds-ellipsis").delay(2000).fadeOut(0);
+     $(".splash-screen").delay(3000).fadeOut(2000);
+   });
+</script>
+</body>
+</html>

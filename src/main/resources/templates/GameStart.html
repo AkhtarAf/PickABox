@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+    <title>Pick a Box</title>
+</head>
+<body>
+<div class="splash-screen">
+    <center>
+        <img src="../static/Logo.png" height="200px" alt="Logo">
+        <br>
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </center>
+</div>
+<form action="GameResult.html">
+    <input type="radio" id="box_1" name="boxNumber" value="1" />
+    <label class="boxLabel" for="box_1"></label>
+    <input type="radio" id="box_2" name="boxNumber" value="2" />
+    <label class="boxLabel" for="box_2"></label>
+    <input type="radio" id="box_3" name="boxNumber" value="3" />
+    <label class="boxLabel" for="box_3"></label>
+
+    <div class="instructions">Select a box and continue</div>
+
+    <center><button type="submit" class="button-continue">Continue</button></center>
+</form> 
+
+<script>
+       $().ready(function() {
+        $(".lds-ellipsis").delay(2000).fadeOut(0);
+        $(".splash-screen").delay(3000).fadeOut(2000);
+      });
+</script>
+</body>
+</html>

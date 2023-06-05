@@ -1,0 +1,206 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Roboto', sans-serif;
+    color: #dadada;
+    padding: 0;
+    background-color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+input[type=radio] {
+    display:none;
+}
+
+input[type=radio]:checked + .boxLabel
+{
+    scale: 1.2;
+}
+
+input[type=radio]:checked + .boxLabel
+{
+    animation: none;
+}
+
+.boxLabel {
+    background-image: url("box.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    margin: 20px;
+
+    animation: shake 0.5s infinite; 
+}
+
+form > .instructions {
+    font-size: 16px;
+    font-weight: regular;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.button-continue {
+    background-color: #7523FA;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(2px) }
+    50% { transform: translateX(-2px) }
+    75% { transform: translateX(2px) }
+    100% { transform: translateX(0) }
+  }
+
+  .splash-screen {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+
+
+  .lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+
+
+  .main-gift span {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+  }
+
+  .main-gift .box-content {
+    display: flex;
+    background-color: #dadada62;
+    height: 40vh;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .other-gifts span {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+  }
+
+  .other-gifts .box-sub-content {
+    display: flex;
+    background-color: #dadada62;
+    height: 10vh;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  #mainHead {
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  #subHead {
+    color: #ddd;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+  }
+  
