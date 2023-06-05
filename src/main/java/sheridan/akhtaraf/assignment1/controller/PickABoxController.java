@@ -26,7 +26,8 @@ public class PickABoxController {
     @GetMapping(value = {"/", "/pickabox"})
     public ModelAndView pickABoxGame(
             @RequestParam(defaultValue = "3") int numberOfBoxes,
-            @RequestParam(defaultValue = "false") boolean isBoxPicked
+            @RequestParam(defaultValue = "false") boolean isBoxPicked,
+            @RequestParam(defaultValue = "0") int boxNumber
     ){
         log.trace("App is started");
         log.debug("numberOfBoxes = " + numberOfBoxes);
@@ -36,12 +37,13 @@ public class PickABoxController {
             log.debug("Box is picked.");
             PickABoxData pickABoxData;
             if(numberOfBoxes > 0 && numberOfBoxes <= 5){
-                pickABoxData = pickABoxService.getBoxes(numberOfBoxes);
+                pickABoxData = pickABoxService.getBoxes(numberOfBoxes, boxNumber);
             }else{
                 log.warn("the numberOfBoxes is out of the range " + numberOfBoxes);
-                pickABoxData = pickABoxService.getBoxes(3);
+                pickABoxData = pickABoxService.getBoxes(3, boxNumber);
             }
-            log.debug("pickABoxData = " + pickABoxData.getBoxData());
+//            log.debug("pickABoxData = " + pickABoxData.getBoxData());
+
             return  new ModelAndView("GameResult", "pickABoxData", pickABoxData);
         }else{
             log.debug("Box is not Picked");

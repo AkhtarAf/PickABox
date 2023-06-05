@@ -17,9 +17,9 @@ public class PickABoxServiceImpl implements PickABoxService {
         gifts.add("Watch");
     }
     @Override
-    public PickABoxData getBoxes(int numberOfBoxes) {
+    public PickABoxData getBoxes(int numberOfBoxes, int boxNumber) {
         if (gifts == null || gifts.size() < numberOfBoxes || numberOfBoxes <= 0) {
-            return new PickABoxDataImpl(gifts);
+            return new PickABoxDataImpl(gifts, boxNumber);
         }
 
         Random random = new Random();
@@ -31,7 +31,7 @@ public class PickABoxServiceImpl implements PickABoxService {
             selectedStrings.add(gifts.get(randomIndex));
         }
 
-        return new PickABoxDataImpl(selectedStrings);
+        return new PickABoxDataImpl(selectedStrings, boxNumber);
     }
 
 }

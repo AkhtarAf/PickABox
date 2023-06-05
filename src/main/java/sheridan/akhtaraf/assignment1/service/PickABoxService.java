@@ -2,6 +2,6 @@ package sheridan.akhtaraf.assignment1.service;
 
 public interface PickABoxService {
 
-    PickABoxData getBoxes(int numberOfBoxes);
+    PickABoxData getBoxes(int numberOfBoxes, int boxNumber);
 
 }

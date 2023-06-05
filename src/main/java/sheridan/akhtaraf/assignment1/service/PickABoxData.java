@@ -6,6 +6,9 @@ public interface PickABoxData {
 
     List<String> getBoxData();
 
+    String getGift();
+
+    List<String> getOtherBoxData();
     int getNumberOfBoxes();
 
 }

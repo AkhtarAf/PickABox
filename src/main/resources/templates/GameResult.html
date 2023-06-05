@@ -2,8 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <link href="../static/style.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
     <title>Pick A Box - Result</title>
 </head>
 <body>
@@ -17,12 +19,14 @@
 </div>
 <div class="main-gift">
     <span>Your Box has</span>
-    <div class="box-content">IPhone</div>
+    <div class="box-content" th:text="${pickABoxData.getGift()}"></div>
 </div>
 <div class="other-gifts">
     <span>Other Boxes Had</span>
-    <div class="box-sub-content">Better Luck Next Time!</div>
-    <div class="box-sub-content">Better Luck Next Time!</div>
+    <div class="box-sub-content"
+         th:each="item : ${pickABoxData.otherBoxData}"
+         th:text="${item}"
+    ></div>
 </div>
 
 <center><a href="/"><button  class="button-continue">⟳ Play Again</button></a></center>

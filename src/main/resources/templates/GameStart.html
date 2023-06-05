@@ -2,26 +2,30 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <link href="../static/style.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
     <title>Pick a Box</title>
 </head>
 <body>
 <div class="splash-screen">
     <center>
-        <img src="../static/Logo.png" height="200px" alt="Logo">
+        <img src="../static/images/Logo.png" height="260" alt="Logo" th:src="@{/images/Logo.png}">
         <br>
         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
     </center>
 </div>
-<form action="GameResult.html">
-    <input type="radio" id="box_1" name="boxNumber" value="1" />
+<form action="GameResult.html" th:action="@{/pickabox}">
+    <input type="radio" id="box_1" name="boxNumber" value="1" required/>
     <label class="boxLabel" for="box_1"></label>
-    <input type="radio" id="box_2" name="boxNumber" value="2" />
+    <input type="radio" id="box_2" name="boxNumber" value="2" required/>
     <label class="boxLabel" for="box_2"></label>
-    <input type="radio" id="box_3" name="boxNumber" value="3" />
+    <input type="radio" id="box_3" name="boxNumber" value="3" required/>
     <label class="boxLabel" for="box_3"></label>
 
+    <input type="hidden" th:name="isBoxPicked" value="true">
     <div class="instructions">Select a box and continue</div>
 
     <center><button type="submit" class="button-continue">Continue</button></center>
