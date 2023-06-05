@@ -4,8 +4,8 @@ import java.util.List;
 
 public class PickABoxDataImpl implements  PickABoxData {
 
-    List<String> boxData;
-    int boxNumber;
+    private final List<String> boxData;
+    private final int boxNumber;
 
     public  PickABoxDataImpl(List<String> boxData, int boxNumber) {
         this.boxData = boxData;

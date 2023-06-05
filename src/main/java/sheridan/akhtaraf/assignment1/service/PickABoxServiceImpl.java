@@ -9,7 +9,7 @@ import java.util.Random;
 @Service
 public class PickABoxServiceImpl implements PickABoxService {
 
-    List<String> gifts = new ArrayList<String>();
+    private final List<String> gifts = new ArrayList<String>();
 
     private PickABoxServiceImpl() {
         gifts.add("Iphone");
