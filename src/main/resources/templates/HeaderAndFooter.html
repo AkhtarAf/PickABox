@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <title>HeaderAndFooter</title>
+</head>
+<body>
+<header th:fragment="Header">
+    <h1>Dice Roller</h1>
+</header>
+<main>
+    Some content in the main tag.
+</main>
+<footer th:fragment="Footer">
+    Afshan Akhtar &copy;
+</footer>
+</body>
+</html>
